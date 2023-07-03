@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Blog app using mern stack",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server",
+    "client":"npm start --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Daniyal Imran",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22"
+  }
+}

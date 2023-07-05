@@ -25,8 +25,6 @@ const connectdb = async (operations,res)=>{
 
  app.get('/',(req,res)=> res.send("hello world"))
 
-
-
 app.get('/articles/:name', async (req,res)=>{
 
 connectdb( async (db,client)=>{

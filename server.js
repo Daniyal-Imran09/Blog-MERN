@@ -25,24 +25,7 @@ const connectdb = async (operations,res)=>{
 
  app.get('/',(req,res)=> res.send("hello world"))
 
-app.get('/article/:name',async (req,res)=>{
-    console.log("hello1");
-    try {
-      const articlename = req.params.name;
-      const client = new MongoClient('mongodb://127.0.0.1:27017', { monitorCommands: true });
-      client.on('commandStarted', started => console.log(started));
-      console.log("hello2");
-      await client.connect();
-      const db = client.db('Mernblog');
-      const articlesinfo = await db.collection('Articles').findOne({ name: articlename });
-      console.log("hello3");
-      res.status(200).json(articlesinfo);
-      console.log("hello");
-      client.close();
-    } catch (error) {
-      console.error(error);
-    }
-})
+
 
 app.get('/articles/:name', async (req,res)=>{
 
